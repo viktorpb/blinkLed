@@ -1,5 +1,6 @@
 package com.berntsson.blinkled
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -16,6 +17,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val loginIntent = Intent(this, LoginActivity::class.java)
+        startActivity(loginIntent)
         val textView = findViewById<TextView>(R.id.textView)
         val buttonOn = findViewById<Button>(R.id.btn_click_me)
         val buttonOff = findViewById<Button>(R.id.btn_click_me_off)
